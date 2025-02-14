@@ -1,0 +1,84 @@
+/*
+ * Core Owl Carousel CSS File
+ * v1.3.3
+ * 
+ * This file contains the core styles for the Owl Carousel slider
+ */
+
+/* Clearfix for carousel wrapper */
+.owl-carousel .owl-wrapper:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+/* Base carousel styles - hidden initially until initialized */
+.owl-carousel {
+    display: none;
+    position: relative;
+    width: 100%;
+    touch-action: pan-y;
+}
+
+/* Wrapper styles */
+.owl-carousel .owl-wrapper {
+    display: none;
+    position: relative;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+/* Outer container styles */
+.owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Auto height animation */
+.owl-carousel .owl-wrapper-outer.autoHeight {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/* Individual slide item */
+.owl-carousel .owl-item {
+    float: left;
+}
+
+/* Navigation and pagination controls */
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+    cursor: pointer;
+}
+
+/* User interaction settings */
+.owl-controls {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Custom cursor for grab interaction */
+.grabbing {
+    cursor: url(grabbing.png) 8 8, move;
+}
+
+/* Hardware acceleration and backface visibility fixes */
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+}
